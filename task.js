@@ -7,7 +7,7 @@
 var users = [
   { name: 'Alfin', age: 22, major: 'Designer' },
   { name: 'Rehan', age: 54, major: 'Business Administration' },
-  { name: 'Samida', age: 22, major: 'Marketing' },
+  { name: 'Nurul', age: 22, major: 'Marketing' },
   { name: 'Morty', age: 27, major: 'Psychology' },
   { name: 'David disini', age: 29, major: 'Engineering' },
   { name: 'Ripazha', age: 12, major: 'Sales' },
@@ -22,7 +22,7 @@ var users = [
  */
  all = () => {
   for (let i = 0; i < users.length; i++) {
-    console.log(`Name: ${users[i].name}, Age: ${users[i].age}, Major: ${users[i].major}`);
+    console.log(`Name: ${users[i].name} Age: ${users[i].age} Major: ${users[i].major}`);
   }
 }
 
@@ -34,6 +34,7 @@ var users = [
  */
  store = (user) => {
   users.push(user);
+  all();
 }
 
 /**
@@ -44,6 +45,7 @@ var users = [
  */
  update = (index, user) => { 
   users[index] = user;
+  all();
 }
 
 
@@ -55,6 +57,7 @@ var users = [
  */
  destroy =(index) => { 
   users.splice(index,index);
+  all();
 }
 
 /**
